@@ -22,11 +22,9 @@ def AND_P(inputs):
 def XOR_P(inputs):
     x, y = inputs
     n1 = OR_P([x, y])
-    n2 = NOT_P(x)
-    n3 = NOT_P(y)
-    n4 = OR_P([n2, n3])
-    n5 = AND_P([n1, n4])
-        return n5
+    n2 = OR_P([NOT_P(x), NOT_P(y)])
+    n3 = AND_P([n1, n2])
+    return n3
 
 inputsList = [[a, b] for a in range(2) for b in range(2)]
 for x in inputsList:
