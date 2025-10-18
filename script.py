@@ -24,6 +24,7 @@ def AND_P(inputs):
 #     n3 = AND_P([n1, n2])
 #     return n3
 
+## XOR Gate V2
 def XOR_P(inputs):
     n1 = neuron(inputs, [1, 1], -1)
     n2 = neuron(inputs, [-1, -1], 1)
