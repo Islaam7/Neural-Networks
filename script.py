@@ -3,8 +3,6 @@ import numpy as np
 def step(x):
     return 1 if x >= 0 else 0
 def neuron(inputs, weights, bias):
-    inputs = np.array(inputs)
-    weights = np.array(weights)
     return step(np.dot(inputs, weights) + bias)
 ## OR Gate
 def OR_P(inputs):
