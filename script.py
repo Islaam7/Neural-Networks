@@ -17,11 +17,17 @@ def AND_P(inputs):
     return neuron(inputs, [1, 1], -2)
 
 ## XOR Gate
+# def XOR_P(inputs):
+#     x, y = inputs
+#     n1 = OR_P([x, y])
+#     n2 = OR_P([NOT_P(x), NOT_P(y)])
+#     n3 = AND_P([n1, n2])
+#     return n3
+
 def XOR_P(inputs):
-    x, y = inputs
-    n1 = OR_P([x, y])
-    n2 = OR_P([NOT_P(x), NOT_P(y)])
-    n3 = AND_P([n1, n2])
+    n1 = neuron(inputs, [1, 1], -1)
+    n2 = neuron(inputs, [-1, -1], 1)
+    n3 = neuron([n1, n2], [1, 1], -2)
     return n3
 
 inputsList = [[a, b] for a in range(2) for b in range(2)]
